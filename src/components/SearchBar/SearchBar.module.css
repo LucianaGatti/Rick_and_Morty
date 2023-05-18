@@ -1,0 +1,39 @@
+.searchBar{
+background-color: aqua;
+display: flex;
+justify-content: flex-end;
+align-items: center;
+
+}
+
+.button{
+    background-color: rgb(60, 190, 212);
+    padding: 10px;
+    color: black;
+    border-color: rgb(151, 206, 76);
+    border-width: 3px;
+    margin: 15px;
+    border-radius: 5px;
+    font-size:1em;
+    font-family:sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+
+}
+.button:hover {
+    background-color: rgb(36, 109, 122);
+    border-color: rgb(60, 190, 212);
+    color: rgb(247, 247, 247);
+  }
+
+.busqueda{
+    background-color:transparent;
+    color: rgb(247, 247, 247);
+    font-weight: bold;
+    border-color: rgb(151, 206, 76);
+    border-width: 3px;
+    border-radius: 5px;
+    width: 18em;
+    height: 3.3em;
+    
+}

@@ -5,6 +5,10 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url("C:\Users\chichi\Desktop\Proyecto integrador\Rick_and_Morty\public\background.jpg");
+  background-repeat: repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 code {

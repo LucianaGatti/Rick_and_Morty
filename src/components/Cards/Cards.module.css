@@ -1,0 +1,11 @@
+.div{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 410px);
+    justify-content: center;	
+    justify-items: center;
+}
+
+.img{
+
+    width: 40%;
+}
