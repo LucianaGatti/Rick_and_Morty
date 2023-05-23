@@ -1,11 +1,11 @@
 import React from "react";
 import Style from "./Error.module.css";
-import { Link } from "react-router-dom/cjs/react-router-dom.min";
+import { Link } from "react-router-dom";
 
 const Error = () => {
   return (
     <div className={Style.container}>
-      <div className={Style.general}>
+      <div className={Style.detail}>
         <h3 className={Style.error}>ERROR</h3>
         <h2 className={Style.dimension}>404th dimension</h2>
 

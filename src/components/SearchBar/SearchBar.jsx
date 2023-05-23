@@ -1,12 +1,21 @@
 import { useState } from "react";
 import style from "./SearchBar.module.css"
+import React from 'react';
 
 
-const SearchBar = ({onSearch}) => {
-   const [id, setId] = useState("")
-   const hundleChange = (event) => {
+const SearchBar = ({onSearch}, props) => {
+
+const [id, setId] = useState("")
+
+const hundleChange = (event) => {
       setId(event.target.value)
+   };
+
+   const handleRandomClick = () => {
+      const randomNumber = Math.floor(Math.random() * 826) + 1;
+      onSearch(randomNumber);
    }
+
 
    return ( 
       <div className={SearchBar}>
@@ -18,9 +27,17 @@ const SearchBar = ({onSearch}) => {
       <button 
       className={style.button}
       onClick= {() => onSearch (id)} > 
-      Agregar
+      ADD
       </button>
+
+      <button 
+      className={style.button} 
+      type='button' 
+      onClick={handleRandomClick}>
+         RANDOM
+         </button>
    </div>
+
    );
 }
 

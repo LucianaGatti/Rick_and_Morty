@@ -20,6 +20,11 @@ const Nav = (props) => {
             </Link>
             <SearchBar onSearch={props.onSearch} />
 
+            <Link to="/">
+                <button className={Style.logOut}></button>
+            </Link>
+
+
 
         </nav>
         

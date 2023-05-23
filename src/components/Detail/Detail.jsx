@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import Style from './Detail.module.css'
-import { useParams } from 'react-router-dom/cjs/react-router-dom.min';
 import axios from 'axios';
+import { useParams } from 'react-router-dom';
 
 
 const Detail = () => {
 
-   const {id} = useParams()
+   const {id} = useParams ()
 
    const [character, setCharacter] = useState ({})
 

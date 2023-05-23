@@ -1,16 +1,36 @@
 import "./App.css";
 import Cards from "./components/Cards/Cards.jsx";
 import Nav from "./components/Nav/Nav";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 import About from "./components/About/About.jsx";
-import { Route, Switch } from "react-router-dom/cjs/react-router-dom.min";
 import Detail from "./components/Detail/Detail";
 import Error from "./components/Error404/Error";
+import Form from "./components/Form/Form";
+import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
 
 function App() {
-  const [characters, setCharacters] = useState([]);
 
+  //!HOOKS
+  const [characters, setCharacters] = useState([]);
+  const location = useLocation();
+  const [access, setAccess] = useState(false);
+  const navigate = useNavigate();
+
+useEffect(() => {
+  if (!access && location.pathname !== '/') {
+    navigate('/');
+  }
+}, [access, navigate, location.pathname]); 
+
+  
+  //! CREDENCIALES
+  
+  const EMAIL = 'lu@gmail.com';
+  const PASSWORD = 'pass123';
+
+
+  //! EVENT HANDLERS
   function onSearch(id) {
     axios(`https://rickandmortyapi.com/api/character/${id}`).then(
       ({ data }) => {
@@ -20,29 +40,48 @@ function App() {
         } else {
           window.alert("¡No hay personajes con este ID!");
         }
-      }
-    );
+      });
   }
 
   //*filter no modifica el array original, crea uno nuevo.
   const onClose = (id) => {
     setCharacters(characters.filter((char) => char.id !== id));
   };
+
+    
+  function login(userData) {
+    if (userData.password === PASSWORD && userData.email === EMAIL) {
+      setAccess(true);
+      navigate('/home');
+    } else{
+      alert("Credenciales incorrectas")
+    }
+  }
+
+
+  const logout = () => {
+    setAccess(false);
+    navigate("/");
+  }
+
+
   return (
     <div className="App">
-      <Nav onSearch={onSearch} />
+     { location.pathname !== "/" && <Nav onSearch={onSearch} logout={logout} />}
       {/* <Cards characters={characters} onClose = {onClose} /> */}
-      <Switch>
-        <Route exact path="/about" component={About} />
+      <Routes>
+        <Route path="/about" element={<About/>} />
 
-        <Route exact path="/detail/:id" component={Detail} />
+        <Route path="/detail/:id" element={<Detail/>} />
 
-        <Route exact path="/home">
-          <Cards characters={characters} onClose={onClose} />
+        <Route path="/home" element={<Cards characters={characters} onClose={onClose} />}>
+          
         </Route>
 
-        <Route path="*" component={Error} />
-      </Switch>
+        <Route path="/" element={<Form login={login} />} />
+
+        <Route path="*" element={<Error/>} />
+      </Routes>
     </div>
   );
 }
