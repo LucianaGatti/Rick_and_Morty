@@ -1,11 +1,26 @@
 .div{
     display: grid;
-    grid-template-columns: repeat(auto-fit, 410px);
+    grid-template-columns: repeat(auto-fit, 430px);
     justify-content: center;	
     justify-items: center;
 }
 
 .img{
+    width: 35%;
+    padding: 1em 1em 1em 1em;
+}
 
-    width: 40%;
+
+@media screen and (max-width: 1320px){
+    .img{
+        width: 45%;
+        padding: 1em 1em 1em 1em;
+    }
+}
+
+@media screen and (max-width: 700px){
+    .img{
+        width: 55%;
+        padding: 1em 1em 1em 1em;
+    }
 }

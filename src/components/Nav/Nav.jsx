@@ -18,11 +18,17 @@ const Nav = (props) => {
             <Link to="/about">
                 <button className={Style.about}>ABOUT</button>
             </Link>
+            <Link to="/favorites">
+                <button className={Style.favorites}>MY ❤️</button>
+            </Link>
             <SearchBar onSearch={props.onSearch} />
 
             <Link to="/">
                 <button className={Style.logOut}></button>
             </Link>
+
+
+
 
 
 

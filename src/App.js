@@ -8,6 +8,8 @@ import Detail from "./components/Detail/Detail";
 import Error from "./components/Error404/Error";
 import Form from "./components/Form/Form";
 import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
+import Favorites from "./components/Favorites/Favorites";
+
 
 function App() {
 
@@ -80,7 +82,11 @@ useEffect(() => {
 
         <Route path="/" element={<Form login={login} />} />
 
+        <Route path="/favorites" element={<Favorites/>} />
+
         <Route path="*" element={<Error/>} />
+
+
       </Routes>
     </div>
   );

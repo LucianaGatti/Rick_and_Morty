@@ -3,7 +3,9 @@
   display: flex;
   justify-content:space-between;
   text-align: center;
+  
 }
+
 
 .about {
   background-color: rgb(60, 190, 212);
@@ -11,8 +13,9 @@
   color: rgb(0, 0, 0);
   border-color: rgb(255, 255, 255);
   border-width: 0.2em;
-  margin: 1.2em;
+  margin: 1em;
   margin-left: 10em;
+  margin-right: 20em;
   border-radius: 0.5em;
   font-size: 1em;
   font-family: sans-serif;
@@ -27,7 +30,7 @@
 }
 
 .home {
-  background-image: url(C:\Users\chichi\Desktop\Integrador\Proyecto\rick_and_morty\src\Assets\Sin-título-1.png);
+  background-image: url(C:\Users\lugat\OneDrive\Desktop\Integrador\Proyecto\rick_and_morty\src\Assets\Sin-título-1.png);
   background-repeat: no-repeat;
   background-position: center;
   border: none;
@@ -49,7 +52,7 @@
 
 
 .logOut {
-  background-image: url(C:\Users\chichi\Desktop\Integrador\Proyecto\rick_and_morty\public\logout.png);
+  background-image: url(C:\Users\lugat\OneDrive\Desktop\Integrador\Proyecto\rick_and_morty\public\logout.png);
   background-position: center;
   width: 3em;
   height: 3em;
@@ -61,11 +64,96 @@
   margin-left: 10em;
   border-radius: 2em;
   font-size: 1em;
-  font-family: sans-serif;
-  font-weight: bold;
   cursor: pointer;
 }
 
 .logOut:hover {
   border-color: rgb(60, 190, 212);
+}
+
+.favorites{
+  background-color: rgb(60, 190, 212);
+  padding: 0.5em;
+  color: rgb(0, 0, 0);
+  border-color: rgb(255, 255, 255);
+  border-width: 0.2em;
+  margin: 1em;
+  border-radius: 0.5em;
+  font-size: 1em;
+  font-family: sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+@media screen and (max-width: 1320px){
+  .about {
+    padding: 0.5em;
+    border-width: 0.2em;
+    margin-left: 7em;
+    margin-right: 7em;
+    font-size: 0.8em;
+  }
+
+  .home {
+    background-size: 125%;
+    margin: 0.5em;
+    width: 3em;
+    height: 3em;
+  }
+
+  .logOut {
+    width: 2.4em;
+    height: 2.4em;
+    margin: 0.5em;
+    border-radius: 2em;
+    font-size: 1em;
+  }
+
+  .favorites{
+    padding: 0.5em;
+    border-width: 0.2em;
+    margin-left: 7em;
+    margin-right: 7em;
+    font-size: 0.8em;
+
+  }
+
+
+}
+
+@media screen and (max-width: 700px){
+  .nav {
+    display: flex;
+    justify-content: space-around;
+  }
+  .logOut{
+    display:flex;
+    width: 1.5em;
+    height: 1.5em;
+    margin: 0.1em;
+    border-width: 0.15em;
+  }
+  .home{
+    display: flex;
+    flex: auto;
+    width: 2em;
+    height: 2em;
+    margin: 0.1em;
+  }
+  .about {
+    padding: 0.3em;
+    border-width: 0.2em;
+    border-radius: 0.5em;
+    font-size:0.7em;
+    margin: 0em 0.3em 0em 0em;
+  }
+  .favorites{
+    padding: 0.3em;
+    border-width: 0.2em;
+    border-radius: 0.5em;
+    font-size:0.7em;
+    margin: 0em 0.3em 0em 0em;
+  }
+  
 }
