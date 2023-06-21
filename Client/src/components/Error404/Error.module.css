@@ -1,0 +1,50 @@
+.container{
+    display: flex;
+    justify-content: center;
+    
+}
+
+
+.detail{
+    display:block;
+    text-align: center;
+}
+
+
+.error {
+  color: aliceblue;
+  font-size: 5em;
+  border: 1em;
+}
+
+.dimension {
+  color: aliceblue;
+  font-size: 5em;
+}
+
+.home {
+  background-color: rgb(60, 190, 212);
+  padding: 10px;
+  color: black;
+  border-color: rgb(255, 255, 255);
+  border-width: 3px;
+  margin: 15px;
+  border-radius: 5px;
+  font-size: 1em;
+  font-family: sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.home:hover {
+  background-color: rgb(151, 206, 76);
+  border-color: rgb(60, 190, 212);
+  color: rgb(247, 247, 247);
+}
+
+.img {
+    width: 30em;
+    height: 40em;
+    padding: 11em 0em 0em 10em;
+}
+
