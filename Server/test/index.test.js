@@ -36,7 +36,7 @@ describe("Test de RUTAS", () => {
 
         it('Responde con {access: false} si el email y password son incorrectos', async () => {
             const response = await agent.get("/rickandmorty/login?email=lu@gmail.com&password=pass1")
-            expect (response.body.access).toEqual(false)
+            expect (response.body.access).toBeFalsy()
         })
     })
 

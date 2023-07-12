@@ -2,7 +2,8 @@
 // const server = express();
 // const router = require ("./routes/index")
 const PORT = 3001;
-const server = require ("./app")
+const server = require ("./app");
+const { conn } = require ("./DB_connection");
 
 // server.use((req, res, next) => {
 //   res.header('Access-Control-Allow-Origin', '*');

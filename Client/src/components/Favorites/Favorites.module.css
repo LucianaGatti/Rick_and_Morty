@@ -2,10 +2,7 @@
 display: grid;
 grid-template-columns: repeat(auto-fit, 450px);
 justify-content: center;
-
-
 }
-
 
 .Select{
     display: flex;
@@ -17,10 +14,14 @@ justify-content: center;
     border-radius: 0.2em;
     font-size: 0.9em;
     font-weight: bold; 
-
 }
 
-option{
-    color: black;
+.Label{
+    color: rgb(229, 233, 234);
+    display: flex;
+    margin: 1em;
+    font-size: 1em;
     font-weight: bold;
 }
+
+

@@ -1,15 +1,11 @@
 .container{
     display: flex;
     justify-content: center;
-    
 }
-
-
 .detail{
     display:block;
     text-align: center;
 }
-
 
 .error {
   color: aliceblue;

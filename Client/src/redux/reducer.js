@@ -1,4 +1,5 @@
-import { ADD_FAV, REMOVE_FAV, FILTER, ORDER } from "./actions";
+import { ADD_FAV, REMOVE_FAV, FILTER, ORDER } from "./types";
+
 
 export const initialState = {
   myFavorites: [],
@@ -7,24 +8,35 @@ export const initialState = {
 
 const rootReducer = (state = initialState, action) => {
   switch (action.type) {
+
     case ADD_FAV:
       return {
         ...state,
         myFavorites: action.payload,
         allCharacters: action.payload,
       };
+
     case REMOVE_FAV:
       return { ...state, myFavorites: action.payload };
+
+//!viejo modulo 2
+    // case REMOVE_FAV:
+    //   return {
+    //     ...state,
+    //     myFavorites: state.myFavorites.filter(
+    //       (char) => char.id !== action.payload
+    //     ),
+    //   };
     // me tengo que fijar que el personaje no tenga el id
     //igual a lo que voy a recibir por action.type
+
+
     case FILTER:
-      const filterByGender = [
-        ...state.allCharacters.filter((char) => char.gender === action.payload),
-      ];
-      return {
-        ...state,
-        myFavorites: filterByGender,
-      };
+      const filterByGender = [ ...state.allCharacters.filter((char) => char.gender === action.payload)];
+      return { ...state, myFavorites: filterByGender };
+
+    
+
     case ORDER:
       const filterByOrder = [...state.allCharacters].sort((a, b) => {
         if (action.payload === "Ascendente") {
@@ -33,14 +45,10 @@ const rootReducer = (state = initialState, action) => {
           return a.id < b.id ? 1 : -1;
         }
       });
-      return {
-        ...state,
-        myFavorites: filterByOrder,
-      };
+      return { ...state, myFavorites: filterByOrder };
+
     default:
-      return {
-        ...state,
-      };
+      return { ...state };
   }
 };
 

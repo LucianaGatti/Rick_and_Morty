@@ -1,32 +1,11 @@
 .nav {
   background-color: rgba(17, 82, 78, 0.2);
   display: flex;
-  justify-content:space-between;
-  text-align: center;
-  
+  justify-content: flex-end;
 }
 
-
-.about {
-  background-color: rgb(60, 190, 212);
-  padding: 0.5em;
-  color: rgb(0, 0, 0);
-  border-color: rgb(255, 255, 255);
-  border-width: 0.2em;
-  margin: 1em;
-  margin-left: 10em;
-  margin-right: 20em;
-  border-radius: 0.5em;
-  font-size: 1em;
-  font-family: sans-serif;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.about:hover {
-  background-color: rgb(151, 206, 76);
-  border-color: rgb(60, 190, 212);
-  color: rgb(247, 247, 247);
+.rightButtons{
+  margin-left: auto;
 }
 
 .home {
@@ -40,38 +19,11 @@
   border-width: 0.2em;
   margin: 1em;
   cursor: pointer;
-  width: 4em;
-  height: 4em;
+  width: 3.5em;
+  height: 3.5em;
 }
 
-.home:hover {
-  border-color: rgb(60, 190, 212);
-
-}
-
-
-
-.logOut {
-  background-image: url(C:\Users\lugat\OneDrive\Desktop\Rick_and_Morty\Client\src\Assets\logout.png);
-  background-position: center;
-  width: 3em;
-  height: 3em;
-  background-size: 120%;
-  color: rgb(0, 0, 0);
-  border-color: rgb(255, 255, 255);
-  border-width: 0.2em;
-  margin: 1em;
-  margin-left: 10em;
-  border-radius: 2em;
-  font-size: 1em;
-  cursor: pointer;
-}
-
-.logOut:hover {
-  border-color: rgb(60, 190, 212);
-}
-
-.favorites{
+.about {
   background-color: rgb(60, 190, 212);
   padding: 0.5em;
   color: rgb(0, 0, 0);
@@ -85,8 +37,77 @@
   cursor: pointer;
 }
 
+.about:hover {
+  background-color: rgb(151, 206, 76);
+  border-color: rgb(60, 190, 212);
+  color: rgb(247, 247, 247);
+}
 
+
+
+.logOut:hover {
+  border-color: rgb(60, 190, 212);
+}
+
+.favorites{
+  background-color: rgb(60, 190, 212);
+  padding: 0.5em;
+  color: rgb(0, 0, 0);
+  border-color: rgb(255, 255, 255);
+  border-width: 0.25em;
+  border-radius: 0.5em;
+  font-size: 0.90em;
+  font-family: sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+  margin-right: 15em;
+}
+
+.favorites:hover {
+  background-color: rgb(151, 206, 76);
+  border-color: rgb(60, 190, 212);
+  color: rgb(247, 247, 247);
+}
+
+.logOut {
+  background-image: url(C:\Users\lugat\OneDrive\Desktop\Rick_and_Morty\Client\src\Assets\logout.png);
+  background-position: center;
+  width: 3.2em;
+  height: 3.2em;
+  background-size: 120%;
+  border-color: rgb(255, 255, 255);
+  border-radius: 2em;
+  cursor: pointer;
+  padding-bottom: 1em;
+  margin-right: 1em;
+}
+
+.img{
+  width: 35%;
+  padding: 1em 1em 1em 1em;
+}
+
+
+
+
+
+/* 
 @media screen and (max-width: 1320px){
+  .img{
+      width: 45%;
+      padding: 1em 1em 1em 1em;
+  }
+}
+
+@media screen and (max-width: 700px){
+  .img{
+      width: 55%;
+      padding: 1em 1em 1em 1em;
+  }
+} */
+
+
+/* @media screen and (max-width: 1320px){
   .about {
     padding: 0.5em;
     border-width: 0.2em;
@@ -156,4 +177,4 @@
     margin: 0em 0.3em 0em 0em;
   }
   
-}
+} */
