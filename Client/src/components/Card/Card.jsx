@@ -26,7 +26,7 @@ function Card({
         setIsFav(true);
       }
     });
-  }, [myFavorites]);
+  }, [myFavorites, id]);
 
   const handleFavorite = () => {
     if (isFav) {
@@ -49,7 +49,7 @@ function Card({
 
   return (
     <div className={style.div}>
-      <div>
+      <div className={style.containerButtons}>
         {isFav ? (
           <button className={style.fav} onClick={handleFavorite}>
             ❤️
@@ -61,7 +61,7 @@ function Card({
         )}
         {isFav ? null : (
           <button className={style.button} onClick={() => onClose(id)}>
-            X
+            x
           </button>
         )}
       </div>
