@@ -2,6 +2,7 @@
 // const server = express();
 // const router = require ("./routes/index")
 const PORT = process.env.PORT || 3001;
+const sequelize = require("sequelize");
 const server = require ("./app");
 const { conn } = require ("./DB_connection");
 
@@ -23,5 +24,20 @@ const { conn } = require ("./DB_connection");
 
 // server.use("/rickandmorty", router)
 
-server.listen(PORT, ()=> {console.log(`LISTENING ON PORT: ${PORT}`);
+//!esto estaba antes...
+
+// server.listen(PORT, ()=> {console.log(`LISTENING ON PORT: ${PORT}`);
+// })
+
+//!homework sequelize
+
+conn
+.sync({force:false})
+.then(() =>{
+    server.listen(PORT, ()=> {
+        console.log(`LISTENING ON PORT: ${PORT}`);
+    })
+})
+.catch((error) => {
+    console.log(error);
 })
